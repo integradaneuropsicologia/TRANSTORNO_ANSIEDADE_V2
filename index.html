@@ -373,377 +373,1011 @@ const SCALE_SCORE_MAPS = {
  * CONFIGURAÇÃO DAS PERGUNTAS (DINÂMICO)
  **************************************************************/
 const FORM_QUESTIONS = [
-  
-{
-  name: "1",
-  section: "Ansiedade — Triagem & História",
-  type: "radio",
-  text: "Preocupação ou ansiedade excessiva na maioria dos dias por 6 meses ou mais?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "2",
-  section: "Ansiedade — Triagem & História",
-  type: "radio",
-  text: "Os sintomas começaram na adolescência ou no início da vida adulta?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "3",
-  section: "Ansiedade — Triagem & História",
-  type: "radio",
-  text: "Houve piora recente associada a estresse como trabalho, saúde, finanças ou família?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "4",
-  section: "Ansiedade — Triagem & História",
-  type: "radio",
-  text: "A ansiedade causa prejuízo em dois ou mais contextos da vida (casa, trabalho ou social)?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "5",
-  section: "Ansiedade — Triagem & História",
-  type: "radio",
-  text: "Existe histórico familiar de ansiedade, pânico ou agorafobia?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "1",
+    type: "radio",
+    section: "Ansiedade — Triagem & História",
+    text: "Você sente ansiedade, medo, preocupação ou tensão de forma intensa, frequente ou difícil de controlar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "2",
+    type: "radio",
+    section: "Ansiedade — Triagem & História",
+    text: "Sua ansiedade interfere na sua vida familiar, social, afetiva, profissional, acadêmica, financeira ou no seu autocuidado?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "3",
+    type: "radio",
+    section: "Ansiedade — Triagem & História",
+    text: "Você sente que sua preocupação é maior do que a situação realmente justificaria?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "4",
+    type: "radio",
+    section: "Ansiedade — Triagem & História",
+    text: "Você tenta controlar a ansiedade ou preocupação, mas sente que ela volta mesmo contra sua vontade?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "5",
+    type: "radio",
+    section: "Ansiedade — Triagem & História",
+    text: "Outras pessoas já disseram que você se preocupa demais, antecipa problemas ou fica tenso mesmo quando não há perigo claro?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "6",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Você apresenta preocupação difícil de controlar ou pensamentos repetitivos sobre problemas?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "7",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Costuma antecipar cenários negativos ou catastróficos sobre o futuro?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "8",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Demonstra dificuldade em lidar com incertezas ou precisa de garantias constantes?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "9",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Fica irritado ou com pavio curto quando está ansioso?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "10",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Apresenta tensão muscular frequente em regiões como pescoço, mandíbula ou costas?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "11",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Sente inquietação ou sensação interna de estar constantemente agitado?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "12",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Relata fadiga ou cansaço causado por ansiedade persistente?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "13",
-  section: "Ansiedade — Núcleo (TAG)",
-  type: "radio",
-  text: "Apresenta dificuldade de concentração por está pensando em várias coisas ao mesmo tempo?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "6",
+    type: "radio",
+    section: "Ansiedade — Sintomas Físicos",
+    text: "Quando fica ansioso, você sente coração acelerado, palpitações, aperto no peito ou sensação de falta de ar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "7",
+    type: "radio",
+    section: "Ansiedade — Sintomas Físicos",
+    text: "Quando fica ansioso, você sente tremores, suor, boca seca, tontura, náusea, diarreia, formigamento ou sensação de desmaio?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "8",
+    type: "radio",
+    section: "Ansiedade — Sintomas Físicos",
+    text: "Quando fica ansioso, você sente tensão muscular, dor no corpo, mandíbula travada, ombros rígidos ou sensação de estar sempre contraído?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "9",
+    type: "radio",
+    section: "Ansiedade — Sintomas Físicos",
+    text: "Sua ansiedade atrapalha seu sono, fazendo você demorar para dormir, acordar durante a noite ou acordar cansado?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "10",
+    type: "radio",
+    section: "Ansiedade — Sintomas Físicos",
+    text: "Sua ansiedade causa irritabilidade, cansaço, inquietação ou dificuldade de concentração?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "14",
-  section: "Ansiedade — Fisiológico",
-  type: "radio",
-  text: "Apresenta taquicardia ou palpitações associadas à ansiedade?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "15",
-  section: "Ansiedade — Fisiológico",
-  type: "radio",
-  text: "Sente falta de ar ou necessidade de suspirar frequentemente?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "16",
-  section: "Ansiedade — Fisiológico",
-  type: "radio",
-  text: "Apresenta tremores, sudorese ou mãos frias em situações de ansiedade?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "17",
-  section: "Ansiedade — Fisiológico",
-  type: "radio",
-  text: "Apresenta sintomas gastrointestinais relacionados à ansiedade como náusea ou dor no estômago?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "18",
-  section: "Ansiedade — Fisiológico",
-  type: "radio",
-  text: "Relata tontura ou sensação de instabilidade sem causa médica identificada?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "11",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Há pelo menos 6 meses, você se preocupa de forma excessiva com várias áreas da vida, como saúde, família, dinheiro, trabalho, estudos, segurança ou futuro?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "12",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Sua preocupação acontece na maioria dos dias, mesmo quando não existe um problema imediato ou uma ameaça concreta?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "13",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Você sente dificuldade de interromper a preocupação depois que começa a pensar em riscos, problemas ou possibilidades ruins?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "14",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Você costuma imaginar cenários negativos, como se sua mente procurasse tudo que pode dar errado?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "15",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Você sente necessidade de se preparar, revisar, confirmar ou antecipar problemas para tentar reduzir a ansiedade?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "16",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Você se preocupa excessivamente com coisas pequenas do cotidiano, como mensagens, atrasos, tarefas, contas, compromissos ou saúde de pessoas próximas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "17",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Mesmo quando um problema é resolvido, sua mente rapidamente encontra outro motivo para se preocupar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "18",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Você sente que precisa ter certeza ou controle das situações para conseguir ficar tranquilo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "19",
+    type: "radio",
+    section: "TAG — Ansiedade Generalizada",
+    text: "Sua preocupação excessiva causa prejuízo no sono, concentração, produtividade, relacionamentos ou qualidade de vida?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "19",
-  section: "Ansiedade — Evitação & Segurança",
-  type: "radio",
-  text: "Evita situações por medo de sentir ansiedade ou mal-estar?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "20",
-  section: "Ansiedade — Evitação & Segurança",
-  type: "radio",
-  text: "Utiliza comportamentos de segurança como ficar perto da saída ou ir acompanhado?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "21",
-  section: "Ansiedade — Evitação & Segurança",
-  type: "radio",
-  text: "Busca garantias repetidamente, perguntando ou pesquisando excessivamente?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "22",
-  section: "Ansiedade — Evitação & Segurança",
-  type: "radio",
-  text: "Realiza checagens corporais frequentes como verificar batimentos cardíacos ou pressão?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "20",
+    type: "radio",
+    section: "Pânico — Ataques de Pânico",
+    text: "Você já teve crises súbitas de medo intenso ou desconforto extremo que chegaram ao pico em poucos minutos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "21",
+    type: "radio",
+    section: "Pânico — Ataques de Pânico",
+    text: "Durante essas crises, você sentiu coração acelerado, falta de ar, tremor, suor, tontura, náusea, formigamento ou aperto no peito?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "22",
+    type: "radio",
+    section: "Pânico — Ataques de Pânico",
+    text: "Durante essas crises, você sentiu medo de morrer, enlouquecer, desmaiar, perder o controle ou ter um ataque cardíaco?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "23",
+    type: "radio",
+    section: "Pânico — Ataques de Pânico",
+    text: "Essas crises de pânico surgem de forma inesperada, sem um gatilho claro ou sem você conseguir prever quando vão acontecer?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "24",
+    type: "radio",
+    section: "Pânico — Ataques de Pânico",
+    text: "Depois de uma crise, você fica por semanas preocupado em ter outra crise ou com medo das consequências físicas da crise?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "25",
+    type: "radio",
+    section: "Pânico — Ataques de Pânico",
+    text: "Você mudou sua rotina para evitar novas crises, como evitar sair sozinho, dirigir, fazer exercício, ficar em lugares fechados ou passar longe de hospitais?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "26",
+    type: "radio",
+    section: "Pânico — Ataques de Pânico",
+    text: "Você evita sensações corporais, como coração acelerado, calor, tontura ou falta de ar, por medo de que isso vire uma crise de pânico?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "23",
-  section: "Pânico — Ataques",
-  type: "radio",
-  text: "Já ocorreram crises súbitas de medo intenso que atingem pico em poucos minutos?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "24",
-  section: "Pânico — Ataques",
-  type: "radio",
-  text: "Durante as crises há medo de morrer, enlouquecer ou perder o controle?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "25",
-  section: "Pânico — Ataques",
-  type: "radio",
-  text: "Durante as crises surgem sintomas físicos intensos como falta de ar, dor no peito ou tremores?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "26",
-  section: "Pânico — Consequências",
-  type: "radio",
-  text: "Existe preocupação persistente com a possibilidade de novas crises de pânico?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "27",
-  section: "Pânico — Consequências",
-  type: "radio",
-  text: "Evita exercícios físicos ou esforços por medo de acelerar o coração?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "27",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Você sente medo ou ansiedade intensa em transporte público, como ônibus, metrô, avião, carro, aplicativo ou trem?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "28",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Você sente medo ou ansiedade intensa em espaços abertos, como ruas, praças, pontes, estacionamentos, mercados abertos ou locais amplos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "29",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Você sente medo ou ansiedade intensa em lugares fechados, como lojas, cinemas, elevadores, salas, túneis ou ambientes com pouca saída?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "30",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Você sente medo ou ansiedade intensa em filas, multidões, eventos, bancos, mercados, igrejas, shows ou locais cheios?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "31",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Você sente medo de sair de casa sozinho por achar que pode passar mal, entrar em pânico, perder o controle ou não conseguir ajuda?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "32",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Você evita lugares porque teme não conseguir escapar ou receber ajuda caso tenha ansiedade, pânico, tontura, desmaio, diarreia ou outro sintoma incapacitante?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "33",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Você só consegue enfrentar certos lugares se estiver acompanhado, perto de uma saída ou com algum recurso de segurança?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "34",
+    type: "radio",
+    section: "Agorafobia",
+    text: "Esse medo de lugares, multidões, transporte ou sair sozinho dura há pelo menos 6 meses?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "28",
-  section: "Agorafobia",
-  type: "radio",
-  text: "Apresenta medo de usar transporte público por receio de passar mal e não conseguir sair?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "29",
-  section: "Agorafobia",
-  type: "radio",
-  text: "Apresenta medo de ambientes abertos ou fechados como elevadores, praças, shoppings ou cinemas?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "30",
-  section: "Agorafobia",
-  type: "radio",
-  text: "Apresenta medo intenso de filas ou locais cheios?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "31",
-  section: "Agorafobia",
-  type: "radio",
-  text: "Apresenta medo de sair sozinho de casa?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "35",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "Você sente medo intenso de ser observado, avaliado, julgado, criticado, rejeitado ou humilhado por outras pessoas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "36",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "Você evita falar em público, apresentar trabalhos, iniciar conversas, participar de grupos ou se expor por medo de passar vergonha?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "37",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "Você sente medo de demonstrar sintomas de ansiedade, como tremer, suar, gaguejar, corar, travar ou parecer nervoso na frente dos outros?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "38",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "Você evita comer, beber, escrever, assinar, usar banheiro, falar ao telefone ou realizar tarefas quando outras pessoas podem observar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "39",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "Antes de situações sociais, você fica antecipando erros, julgamentos, rejeições ou cenas de vergonha?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "40",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "Depois de interações sociais, você fica revisando mentalmente o que falou, como agiu ou se pareceu estranho para os outros?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "41",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "O medo social dura há pelo menos 6 meses e prejudica sua vida social, afetiva, acadêmica ou profissional?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "42",
+    type: "radio",
+    section: "Ansiedade Social",
+    text: "Seu medo principal em situações sociais é ser julgado negativamente, e não apenas ter uma crise física ou não conseguir escapar?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "32",
-  section: "Ansiedade Social",
-  type: "radio",
-  text: "Tem medo de ser avaliado negativamente ou de passar vergonha em público?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "33",
-  section: "Ansiedade Social",
-  type: "radio",
-  text: "Apresenta medo de falar em público ou em reuniões?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "34",
-  section: "Ansiedade Social",
-  type: "radio",
-  text: "Evita comer, beber ou escrever em público por vergonha?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "35",
-  section: "Ansiedade Social",
-  type: "radio",
-  text: "Evita conversar com desconhecidos ou pessoas em posição de autoridade?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "36",
-  section: "Ansiedade Social",
-  type: "radio",
-  text: "Sinais físicos como rubor ou voz trêmula atrapalham o desempenho social?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-}
+  {
+    name: "43",
+    type: "radio",
+    section: "Fobia Específica",
+    text: "Você sente medo intenso e persistente de algum objeto ou situação específica, como animais, altura, sangue, agulhas, avião, elevador, dirigir, tempestade ou lugares fechados?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "44",
+    type: "radio",
+    section: "Fobia Específica",
+    text: "Quando entra em contato com esse objeto ou situação específica, sua ansiedade aparece quase imediatamente?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "45",
+    type: "radio",
+    section: "Fobia Específica",
+    text: "Você evita esse objeto ou situação específica ou suporta a situação com medo intenso?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "46",
+    type: "radio",
+    section: "Fobia Específica",
+    text: "O medo é maior do que o perigo real que esse objeto ou situação costuma representar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "47",
+    type: "radio",
+    section: "Fobia Específica",
+    text: "Esse medo específico dura há pelo menos 6 meses?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "48",
+    type: "radio",
+    section: "Fobia Específica",
+    text: "Esse medo específico limita sua rotina, deslocamentos, trabalho, estudos, saúde, lazer ou vida social?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
 
+  {
+    name: "49",
+    type: "radio",
+    section: "Ansiedade de Separação",
+    text: "Você sente medo ou ansiedade intensa quando precisa se afastar de pessoas importantes para você, como pais, filhos, parceiro, familiares ou cuidadores?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "50",
+    type: "radio",
+    section: "Ansiedade de Separação",
+    text: "Você se preocupa excessivamente que algo ruim aconteça com uma pessoa importante enquanto vocês estão separados?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "51",
+    type: "radio",
+    section: "Ansiedade de Separação",
+    text: "Você se preocupa excessivamente que algo ruim aconteça com você e impeça o reencontro com pessoas importantes?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "52",
+    type: "radio",
+    section: "Ansiedade de Separação",
+    text: "Você evita sair, dormir fora, viajar, trabalhar, estudar ou ficar sozinho por medo da separação de pessoas importantes?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "53",
+    type: "radio",
+    section: "Ansiedade de Separação",
+    text: "Você tem pesadelos, sintomas físicos ou sofrimento intenso quando antecipa separação de pessoas importantes?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "54",
+    type: "radio",
+    section: "Ansiedade de Separação",
+    text: "Esse medo de separação é maior do que o esperado para sua idade e causa prejuízo na sua autonomia ou rotina?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
 
+  {
+    name: "55",
+    type: "radio",
+    section: "Mutismo Seletivo",
+    text: "Você tem dificuldade persistente de falar em situações sociais específicas, mesmo conseguindo falar normalmente em outros ambientes?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "56",
+    type: "radio",
+    section: "Mutismo Seletivo",
+    text: "Você consegue falar em casa ou com pessoas de confiança, mas trava ou fica sem voz em escola, trabalho, consultas, grupos ou situações sociais específicas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "57",
+    type: "radio",
+    section: "Mutismo Seletivo",
+    text: "Essa dificuldade de falar prejudica sua comunicação, desempenho escolar/profissional, interação social ou autonomia?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "58",
+    type: "radio",
+    section: "Mutismo Seletivo",
+    text: "Essa dificuldade de falar dura há pelo menos 1 mês e não acontece apenas por falta de conhecimento da língua ou dificuldade de fala?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "59",
+    type: "radio",
+    section: "Ansiedade — Evitação e Segurança",
+    text: "Você evita situações importantes porque teme sentir ansiedade, passar mal, ser julgado, perder o controle ou não conseguir sair da situação?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "60",
+    type: "radio",
+    section: "Ansiedade — Evitação e Segurança",
+    text: "Você só enfrenta certas situações se tiver uma pessoa de confiança, remédio, rota de fuga, celular carregado, hospital próximo ou outro recurso de segurança?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "61",
+    type: "radio",
+    section: "Ansiedade — Evitação e Segurança",
+    text: "Você organiza sua rotina para evitar gatilhos de ansiedade, mesmo que isso limite sua liberdade, trabalho, estudos ou vida social?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "62",
+    type: "radio",
+    section: "Ansiedade — Evitação e Segurança",
+    text: "Você pede garantias repetidamente a outras pessoas para se acalmar sobre saúde, segurança, decisões, relacionamentos ou riscos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "63",
+    type: "radio",
+    section: "Ansiedade — Cognições e Preocupações",
+    text: "Você superestima a chance de algo ruim acontecer, mesmo quando outras pessoas consideram o risco pequeno?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "64",
+    type: "radio",
+    section: "Ansiedade — Cognições e Preocupações",
+    text: "Você subestima sua capacidade de lidar com problemas, como se não fosse conseguir suportar caso algo ruim aconteça?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "65",
+    type: "radio",
+    section: "Ansiedade — Cognições e Preocupações",
+    text: "Você sente necessidade de certeza absoluta antes de tomar decisões, responder mensagens, sair de casa, iniciar tarefas ou assumir responsabilidades?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "66",
+    type: "radio",
+    section: "Ansiedade — Cognições e Preocupações",
+    text: "Você interpreta sensações corporais comuns como sinal de doença grave, desmaio, infarto, crise ou perda de controle?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "67",
+    type: "radio",
+    section: "Ansiedade — Prejuízo Funcional",
+    text: "A ansiedade prejudica sua produtividade, concentração, tomada de decisão, sono, saúde física ou capacidade de concluir tarefas?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "68",
+    type: "radio",
+    section: "Ansiedade — Prejuízo Funcional",
+    text: "A ansiedade prejudica seus relacionamentos porque você busca garantias, evita conversas, se irrita, se isola ou fica dependente de apoio constante?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "69",
+    type: "radio",
+    section: "Ansiedade — Prejuízo Funcional",
+    text: "A ansiedade impede você de fazer coisas importantes, como trabalhar, estudar, dirigir, viajar, sair sozinho, se expor socialmente ou cuidar da saúde?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "70",
+    type: "radio",
+    section: "Ansiedade — Prejuízo Funcional",
+    text: "Mesmo quando consegue manter a rotina, você sente que faz tudo com sofrimento, tensão ou esforço emocional muito alto?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "71",
+    type: "radio",
+    section: "Ansiedade — Diferencial com Depressão",
+    text: "Seu sofrimento principal é preocupação, medo, tensão e antecipação de problemas, mais do que tristeza persistente ou perda de prazer?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "72",
+    type: "radio",
+    section: "Ansiedade — Diferencial com Depressão",
+    text: "Quando a ansiedade diminui, seu humor, energia e motivação melhoram de forma importante?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "73",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TOC",
+    text: "Suas preocupações vêm como pensamentos intrusivos repetitivos e indesejados que você tenta neutralizar com rituais, checagens, contagens, limpezas ou revisões mentais?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "74",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TOC",
+    text: "Você sente que precisa realizar rituais ou ações repetitivas para aliviar ansiedade ou evitar que algo ruim aconteça?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "75",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TEPT",
+    text: "Sua ansiedade começou ou piorou após trauma, violência, abuso, acidente, ameaça de morte ou situação de medo extremo?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "76",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TEPT",
+    text: "Sua ansiedade é disparada principalmente por lembranças, lugares, sons, cheiros, datas ou situações que lembram um trauma?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "77",
+    type: "radio",
+    section: "Ansiedade — Diferencial com Psicose",
+    text: "Sua ansiedade está ligada a crenças fixas de perseguição, controle, mensagens especiais, vozes ou percepções que outras pessoas não confirmam?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "78",
+    type: "radio",
+    section: "Ansiedade — Diferencial com Psicose",
+    text: "Você consegue considerar que seus medos podem ser exagerados ou fruto da ansiedade, mesmo quando parecem muito reais?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "79",
+    type: "radio",
+    section: "Ansiedade — Diferencial com Bipolaridade",
+    text: "Sua ansiedade aparece junto com fases de vários dias de energia aumentada, pouca necessidade de sono, fala acelerada, impulsividade ou euforia?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "80",
+    type: "radio",
+    section: "Ansiedade — Diferencial com Bipolaridade",
+    text: "Você já teve ansiedade com aceleração mental e insônia, mas sem cansaço, acompanhada de aumento de energia e comportamentos de risco?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "81",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TDAH",
+    text: "Suas dificuldades de concentração, inquietação e desorganização existem desde a infância, mesmo quando você não está ansioso?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "82",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TDAH",
+    text: "Sua ansiedade surge principalmente como consequência de atrasos, esquecimentos, desorganização, procrastinação ou dificuldade de cumprir tarefas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "83",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TEA",
+    text: "Sua ansiedade aparece principalmente por mudanças de rotina, imprevisibilidade, sobrecarga sensorial, interação social confusa ou dificuldade de interpretar sinais sociais?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "84",
+    type: "radio",
+    section: "Ansiedade — Diferencial com TEA",
+    text: "Desde a infância, você apresenta rigidez, interesses restritos, dificuldade de comunicação social ou sensibilidade sensorial junto com ansiedade?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "85",
+    type: "radio",
+    section: "Ansiedade — Substâncias e Medicamentos",
+    text: "Sua ansiedade começou ou piorou após uso de álcool, cannabis, cocaína, estimulantes, energéticos, cafeína, anabolizantes ou outras substâncias?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "86",
+    type: "radio",
+    section: "Ansiedade — Substâncias e Medicamentos",
+    text: "Sua ansiedade começou ou piorou após início, aumento, retirada ou troca de medicações, como antidepressivos, estimulantes, corticoides, hormônios, descongestionantes ou remédios para emagrecer?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "87",
+    type: "radio",
+    section: "Ansiedade — Substâncias e Medicamentos",
+    text: "Sua ansiedade aparece principalmente durante intoxicação, abstinência, ressaca ou retirada de substâncias/medicações?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "88",
+    type: "radio",
+    section: "Ansiedade — Condições Médicas",
+    text: "Sua ansiedade começou junto com condição médica, como hipertireoidismo, arritmia, problema cardíaco, respiratório, vestibular, neurológico, hormonal ou dor crônica?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "89",
+    type: "radio",
+    section: "Ansiedade — Condições Médicas",
+    text: "Os sintomas físicos aparecem primeiro, de forma intensa, e depois geram medo, preocupação ou sensação de ameaça?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "90",
+    type: "radio",
+    section: "Ansiedade — Condições Médicas",
+    text: "Quando sua condição médica, sono, dor, alimentação ou uso de estimulantes melhora, sua ansiedade também melhora claramente?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "91",
+    type: "radio",
+    section: "Ansiedade — Curso e Início",
+    text: "A ansiedade começou na infância ou adolescência e se manteve ao longo da vida em diferentes fases?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "92",
+    type: "radio",
+    section: "Ansiedade — Curso e Início",
+    text: "A ansiedade começou recentemente, após estresse, perda, doença, trauma, mudança de vida, conflito ou sobrecarga?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "93",
+    type: "radio",
+    section: "Ansiedade — Curso e Início",
+    text: "A ansiedade acontece em crises específicas, com início e fim claros, em vez de estar presente como preocupação constante?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "94",
+    type: "radio",
+    section: "Ansiedade — Curso e Início",
+    text: "A ansiedade é persistente e aparece em muitos dias, mesmo quando não há crise de pânico ou gatilho específico?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "95",
+    type: "radio",
+    section: "Ansiedade — Risco e Segurança",
+    text: "Por causa da ansiedade, você já pensou que não aguentava mais viver, queria desaparecer ou queria morrer?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "96",
+    type: "radio",
+    section: "Ansiedade — Risco e Segurança",
+    text: "Durante crises de ansiedade ou pânico, você já pensou em se machucar, se jogar, fugir sem controle ou fazer algo perigoso para a crise parar?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "97",
+    type: "radio",
+    section: "Ansiedade — Risco e Segurança",
+    text: "Atualmente, existe risco de você se machucar, tentar suicídio, usar substâncias em excesso ou tomar decisões impulsivas por causa da ansiedade?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "98",
+    type: "radio",
+    section: "Ansiedade — Proteção e Recursos",
+    text: "Você tem estratégias, pessoas, tratamento, fé, rotina, medicação prescrita ou recursos que ajudam a controlar a ansiedade sem se colocar em risco?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  }
 ];
 
+    
 const INDICATORS_CONFIG = {};
 
     /**************************************************************
